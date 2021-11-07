@@ -1,0 +1,28 @@
+#book:hover {
+    transform: scale(1.1);
+}
+
+#favorite {
+    background-color: gray;
+}
+
+#favorite:hover {
+    transform: scale(1.2);
+}
+
+#container_fvr:visited {
+    background-image: url('../images/icon_favorite_true.png');
+}
+
+@font-face {
+    font-family: Dancing;
+    src: url(../fonts/DancingScript-VariableFont_wght.ttf);
+}
+
+.text {
+    margin-left: 5%;
+    font-family: Dancing;
+    font-size: 45px;
+    font-weight: bold;
+    color: #fff;
+}

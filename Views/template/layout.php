@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="Public/css/main.css">
     <link rel="stylesheet" href="Public/css/animateLeft.css">
     <link rel="stylesheet" href="Public/css/animateRight.css">
+    <script language="javascript" src="Public/js/stickyMenu.js"></script>
+
 </head>
 <body >
     <?php 
@@ -21,28 +23,27 @@
         $conn = mysqli_connect($severname,$username,$password,$db_name);
 
     ?>
-        <div id="bannerMain" style="display:flex;" >
-            <?php loadModule('bannerLeft'); ?>
-            <?php loadModule('bannerRight'); ?>
-        </div>
+    
     
     <!-- load menu -->
     <?php loadModule('menu'); ?>
-    <script>
-    window.onscroll = function() {
-        myFunction()
-    };
-    var menu = document.getElementById("menu");
-    var sticky = menu.offsetTop;
+   <script>
+       window.onscroll = function() {
+            myFunction()
+        };
+        var menu = document.getElementById("menu");
+        var sticky = menu.offsetTop;
 
-    function myFunction() {
-        if (window.pageYOffset >= sticky) {
-            menu.classList.add("sticky")
-        } else {
-            menu.classList.remove("sticky")
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                menu.classList.add("sticky")
+            } else {
+                menu.classList.remove("sticky")
+            }
         }
-    }
-</script>
+   </script>
+   <!-- load banner in layout -->
+   <?php loadModule('bannerMain'); ?>
     <!-- load danh mục/Category  -->
     <?php loadModule('listcategory'); ?>
 
