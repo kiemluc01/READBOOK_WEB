@@ -1,0 +1,138 @@
+body {
+    background-color: #f6f6f6;
+}
+
+#menu {
+    background-color: #FFFFFF;
+    height: 73px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* font-family: 'https://daotao1.ute.udn.vn/templates/fonts/fontawesome-webfont.woff?v=4.7.0'; */
+}
+
+nav {
+    display: flex;
+    width: auto;
+}
+
+#icon_nav {
+    display: flex;
+    width: 18%;
+    justify-content: space-between;
+    margin-right: 4%;
+}
+
+img.icon_nav {
+    height: 30px;
+    width: 30px;
+}
+
+li {
+    list-style-type: none;
+}
+
+@font-face {
+    font-family: woff;
+    src: url(../fonts/fontawesome-webfont.woff);
+}
+
+li.nav,
+a.nav {
+    display: inline-block;
+    font-size: 20px;
+    color: #000;
+    line-height: 70px;
+    font-family: woff;
+    font-weight: bold;
+}
+
+a.nav {
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a.nav:hover {
+    background-color: #d1cccc;
+}
+
+img#logo {
+    height: 67px;
+    width: 67px;
+    margin-top: 3px;
+    margin-left: 27px;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+}
+
+#personal,
+#library,
+#notification {
+    margin-top: 15px;
+    height: 40px;
+    width: 40px;
+}
+
+#find {
+    display: flex;
+    margin-left: 3%;
+    align-items: center;
+    flex-direction: row;
+    height: 41px;
+    width: 250px;
+    margin-top: 13px;
+    border-radius: 15px/20px;
+    background-color: #C4C4C4;
+}
+
+.find {
+    display: inline-block;
+    border: none;
+    border-radius: 15px/20px;
+    background-color: #C4C4C4;
+    height: 31px;
+}
+
+input.find {
+    width: 250px;
+    padding: 5px;
+}
+
+#book:hover {
+    transform: scale(1.1);
+}
+
+#favorite {
+    background-color: gray;
+}
+
+#favorite:hover {
+    transform: scale(1.2);
+}
+
+#container_fvr:visited {
+    background-image: url('../images/icon_favorite_true.png');
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    border-bottom: 1px #23a8a6 solid;
+}
+
+@font-face {
+    font-family: Dancing;
+    src: url(../fonts/DancingScript-VariableFont_wght.ttf);
+}
+
+.text {
+    margin-left: 5%;
+    font-family: Dancing;
+    font-size: 45px;
+    font-weight: bold;
+    color: #fff;
+}
