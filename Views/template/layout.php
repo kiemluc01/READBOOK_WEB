@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web đọc sách online</title>
     <link rel="stylesheet" href="Public/css/main.css">
+    <link rel="stylesheet" href="Public/css/menu.css">
+    <link rel="stylesheet" href="Public/css/content.css">
+    <link rel="stylesheet" href="Public/css/footer.css">
     <link rel="stylesheet" href="Public/css/animateLeft.css">
     <link rel="stylesheet" href="Public/css/animateRight.css">
     <script language="javascript" src="Public/js/stickyMenu.js"></script>
@@ -24,7 +27,8 @@
 
     ?>
     
-    
+    <!-- load banner in layout -->
+    <?php loadModule('bannerMain'); ?>
     <!-- load menu -->
     <?php loadModule('menu'); ?>
    <script>
@@ -42,12 +46,41 @@
             }
         }
    </script>
-   <!-- load banner in layout -->
-   <?php loadModule('bannerMain'); ?>
+   
     <!-- load danh mục/Category  -->
     <?php loadModule('listcategory'); ?>
-
-
+    <!-- <script>
+        
+        function click_fvr(){
+            document.getElementById("favorite").src="Public/images/icon_favorite_true.png";
+            document.getElementById("favorite").onclick = "reclick_fvr()";
+        }
+        function reclick_fvr(){
+            document.getElementById("favorite").src="Public/images/icon_favorite_false.jpg";
+            document.getElementById("favorite").onclick = "click_fvr()";
+        }
+    </script> -->
+    <script language="javascript">  
+            // Lấy đối tượng
+            var a_list = document.getElementsByClassName("fvr");
+             
+            // Lặp và gán sự kiện
+            for (var i = 0; i < a_list.length; i++){
+                a_list[i].onclick = function()
+                {
+                    a_list[i].src = "Public/images/icon_favorite_true.png";
+                    a_list[i].onclick = function()
+                    {
+                        a_list[i].src = "Public/images/icon_favorite_false.jpg";
+                        
+                        // return false để khỏi reload trang
+                        return false
+                    };
+                    // return false để khỏi reload trang
+                    return false
+                };
+            }
+        </script>
     <?php loadModule('footer'); ?>
 </body>
 </html>
