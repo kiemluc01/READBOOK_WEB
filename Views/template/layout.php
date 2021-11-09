@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="Public/css/footer.css">
     <link rel="stylesheet" href="Public/css/animateLeft.css">
     <link rel="stylesheet" href="Public/css/animateRight.css">
+    <link rel="stylesheet" href="Public/css/book.css">
     <script language="javascript" src="Public/js/stickyMenu.js"></script>
 
 </head>
@@ -27,10 +28,9 @@
 
     ?>
     
-    <!-- load banner in layout -->
-    <?php loadModule('bannerMain'); ?>
+    
     <!-- load menu -->
-    <?php loadModule('menu'); ?>
+    <?php loadModule('menu_layout'); ?>
    <script>
        window.onscroll = function() {
             myFunction()
@@ -46,41 +46,16 @@
             }
         }
    </script>
-   
-    <!-- load danh mục/Category  -->
-    <?php loadModule('listcategory'); ?>
-    <!-- <script>
-        
-        function click_fvr(){
-            document.getElementById("favorite").src="Public/images/icon_favorite_true.png";
-            document.getElementById("favorite").onclick = "reclick_fvr()";
-        }
-        function reclick_fvr(){
-            document.getElementById("favorite").src="Public/images/icon_favorite_false.jpg";
-            document.getElementById("favorite").onclick = "click_fvr()";
-        }
-    </script> -->
-    <script language="javascript">  
-            // Lấy đối tượng
-            var a_list = document.getElementsByClassName("fvr");
-             
-            // Lặp và gán sự kiện
-            for (var i = 0; i < a_list.length; i++){
-                a_list[i].onclick = function()
-                {
-                    a_list[i].src = "Public/images/icon_favorite_true.png";
-                    a_list[i].onclick = function()
-                    {
-                        a_list[i].src = "Public/images/icon_favorite_false.jpg";
-                        
-                        // return false để khỏi reload trang
-                        return false
-                    };
-                    // return false để khỏi reload trang
-                    return false
-                };
-            }
-        </script>
+   <!-- load banner in layout -->
+   <div id="bannerMain" style="display:flex;" >
+        <?php  loadModule('bannerLeft'); ?>
+        <?php  loadModule('bannerRight'); ?>
+    </div>
+    <div id="content">
+        <!-- load danh mục/Category  -->
+        <?php loadModule('listcategory'); ?>
+    </div>
+    
     <?php loadModule('footer'); ?>
 </body>
 </html>

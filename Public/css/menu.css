@@ -17,6 +17,7 @@ nav {
     width: 18%;
     justify-content: space-between;
     margin-right: 4%;
+    height: 73px;
 }
 
 img.icon_nav {
@@ -48,7 +49,6 @@ a.nav {
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 a.nav:hover {
@@ -96,4 +96,21 @@ img#logo {
 input.find {
     width: 250px;
     padding: 5px;
+}
+
+.login {
+    display: inline-block;
+    font-size: 20px;
+    color: #000;
+    line-height: 70px;
+    font-family: woff;
+    font-weight: bold;
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+a.login:hover {
+    background-color: #d1cccc;
 }
