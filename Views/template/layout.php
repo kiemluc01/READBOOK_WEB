@@ -7,8 +7,9 @@
     <title>Web đọc sách online</title>
     <link rel="stylesheet" href="Public/css/main.css">
     <link rel="stylesheet" href="Public/css/menu.css">
-    <link rel="stylesheet" href="Public/css/content.css">
     <link rel="stylesheet" href="Public/css/footer.css">
+
+    <link rel="stylesheet" href="Public/css/content.css">    
     <link rel="stylesheet" href="Public/css/animateLeft.css">
     <link rel="stylesheet" href="Public/css/animateRight.css">
     <link rel="stylesheet" href="Public/css/book.css">

@@ -30,3 +30,8 @@ img.details_container {
     height: 30px;
     width: 30px;
 }
+
+table#container_listbook {
+    margin-left: 4%;
+    margin-right: 4%;
+}
